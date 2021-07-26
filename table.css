@@ -1,0 +1,22 @@
+table{
+    width: 700px;
+    padding: 20px;
+    margin: auto;
+
+}
+th{
+    background-color: blue;
+    padding: 20px;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+td{
+    text-align: center;
+    padding: 20px;
+}
+tr:nth-child(even){
+    background-color: burlywood;
+}
+tr:nth-child(odd){
+    background-color: cadetblue;
+}

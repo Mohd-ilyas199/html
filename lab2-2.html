@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function setFullName(){
+var fname=document.getElementById("firstname");
+var mname=document.getElementById("middlename");
+var lname=document.getElementById("lastname");
+var fullname=document.getElementById("fullname");
+fullname.value=fname.value +" " + mname.value + " " + lname.value +" "
+}
+function clearfullname(){
+    var clrfullname=document.getElementById('fullname')
+    clrfullname.value=" ";
+}
+function clearfirstname(){
+    var clrfirstname=document.getElementById('firstname');
+    clrfirstname.value=" ";
+
+}
+function clearmiddlename(){
+    var clrmiddlename=document.getElementById('middlename');
+    clrmiddlename.value=" ";
+}
+
+
+    function clearlastname(){
+    var clrlastname=document.getElementById('lastname');
+    clrlastname.value=" ";
+}
+
+    </script>
+    <style>
+     fieldset{
+         color: blue;
+     }
+legend{
+    color: tomato;
+}
+    </style>
+    <marquee> last date of form is as per your wish</marquee>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration form</form></legend>
+    <h1>employee details</h1>
+    <h3>personal details</h3> 
+    <label>first name</label>
+    <input type="text" id="firstname">
+    <br>
+    <br>
+    <label>middle name</label>
+    <input type="text" id="middlename">
+    <br>
+    <br>
+    <label>last name</label>
+    <input type="text" id="lastname">
+    <br>
+    <br>
+    <button onclick="setFullName()">full name</button>
+    <br>
+    <br>
+    <label>fullname</label>
+    <input type="text" id="fullname">
+    <button onclick="clearfullname()">CLEAR</button>
+    <button onclick="clearfirstname()">clear first</button>
+    <button onclick="clearmiddlename()">clear middle</button>
+    <button onclick="clearlastname()">clear last</button>
+
+    </fieldset>
+
+
+</body>
+</html>

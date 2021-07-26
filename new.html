@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function setTheme(){
+      var objspan1=document.getElementById("s1");
+      var objspan2=document.getElementById("s2");
+      objspan1.style="color:yellow";
+      objspan2.style="color:black";
+      }
+
+      function setTheme2(){
+      var objspan1=document.getElementById("s1");
+      var objspan2=document.getElementById("s2");
+      objspan1.style="color:red";
+      objspan2.style="color:pink";
+      }
+
+      function setTheme3(){
+      var objspan1=document.getElementById("s1");
+      var objspan3=document.getElementById("s2");
+      objspan1.style="color:blue";
+      objspan3.style="color:black";
+      }
+    </script>
+</head>
+<body>
+    <h1>THEME CHANGING</h1>
+    <br>
+    <br>
+<h2>
+ <span id="s1" style="color: red;">pickup</span><span id="s2" style="color:blue;">biz</span>
+</h2>
+<button onclick="setTheme()">theme1</button>
+<button onclick="setTheme2()">theme2</button>
+<button onclick="setTheme3()">theme3</button>    
+    
+</body>
+</html>

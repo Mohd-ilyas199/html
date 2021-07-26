@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mi(){
+         document.getElementById("body").style=`background-color:${sessionStorage.getItem("colorpick")}`;
+        }
+    </script>
+</head>
+<style>
+     body{
+       background-color: darkorchid;
+
+     }
+
+
+</style>
+<body id="body">
+    <h1>this is anime page</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jqXUm2YS-mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+<script>mi()</script>
+</html>
