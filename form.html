@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setStoreValue(){
+     var namedata=document.getElementById("name");
+     var passworddata=document.getElementById("password");
+     var cpassdata=document.getElementById("confirmpassword");
+     var callcolor=document.getElementById("colorPicker");
+     var mgendata=document.getElementById("mgen");
+     var fgendata=document.getElementById("fgen");
+       
+     sessionStorage.setItem("username", namedata.value);
+     sessionStorage.setItem("userpassword", passworddata.value);
+     sessionStorage.setItem("userconfirmpass", cpassdata.value );
+     sessionStorage.setItem("colorpick",callcolor.value);
+     sessionStorage.setItem("MALE",mgendata.value);
+     sessionStorage.setItem("FEMALE",fgendata);
+        }
+
+        function getStoreValue(){
+            var namedata=document.getElementById("name");
+            var passworddata=document.getElementById("password");
+            var cpassdata=document.getElementById("confirmpassword");
+            var callcolor=document.getElementById("colorPicker");
+            var bodyclr=document.getElementById("body");
+            var mgendata=document.getElementById("mgen");
+            var fgendata=document.getElementById("fgen");
+
+            namedata.value=sessionStorage.getItem("username");
+            passworddata.value=sessionStorage.getItem("userpassword");
+            cpassdata.value=sessionStorage.getItem("userconfirmpass");
+            callcolor.value=sessionStorage.getItem("colorpick");
+            mgendata.value=sessionStorage.getItem("MALE");
+            fgendata.value=sessionStorage.getItem("FEMALE");
+            document.getElementById("body").style=`background-color:${sessionStorage.getItem("colorpick")}`;
+        }
+        
+
+        
+
+
+
+    </script>
+</head>
+<style>
+    #id1{
+padding-left: 500px;
+font-size: 20px;
+ }
+ form{
+background-color: burlywood;
+height: 55%;
+width: 800px;
+
+ }
+
+
+    
+
+
+
+
+
+</style>
+<body id="body">
+    <fieldset>
+    <form id="id1">
+        <h1><legend>form</legend></h1>
+<label> name</label>
+<input type="text" placeholder="enter name" id="name">
+<br>
+<br>
+<label>password</label>
+<input type="password" placeholder="enter password" id="password">
+<br>
+<br>
+<label>confirm password</label>
+<input type="password" placeholder="re enter password" id="confirmpassword">
+<br>
+<br>
+gender:         <input type="radio" name="gender" id="mgen">male
+                <input type="radio" name="gender" id="fgen">female
+<br>
+<br>
+<input type="color" id="colorPicker">
+<button onclick="setStoreValue()">submit</button>
+<button>cancel</button>
+
+    </form>
+    </fieldset>
+</body>
+<script>
+getStoreValue();
+</script>
+</html>
